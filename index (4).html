@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Saya - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen">
+
+  <!-- HEADER -->
+  <header class="bg-gray-800 py-5 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center fade-in">
+      <h1 class="text-3xl font-extrabold">Tentang Saya</h1>
+      <nav class="space-x-6 text-sm md:text-base">
+        <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+        <a href="project.html" class="hover:text-blue-400 transition">Projects</a>
+        <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container mx-auto px-6 py-20 text-center">
+    <div class="fade-in max-w-3xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Halo, Saya Brian</h2>
+      <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+        Saya adalah pengembang web dengan minat besar dalam desain interaktif dan pengalaman pengguna. Halaman ini akan membawa kamu mengenal lebih dalam tentang siapa saya dan apa yang saya kerjakan.
+      </p>
+
+      <!-- DATA PRIBADI -->
+      <section class="mt-16 text-left fade-in max-w-3xl mx-auto">
+        <h3 class="text-3xl font-semibold mb-4 border-b border-gray-600 pb-2">Data Pribadi</h3>
+        <div class="grid sm:grid-cols-2 gap-6 text-gray-300">
+          <div>
+            <p><span class="font-semibold text-white">Nama:</span> Brian Nugroho</p>
+            <p><span class="font-semibold text-white">status pekerjaan</span>:</span> freelance</p>
+            <p><span class="font-semibold text-white">Skill:</span> web development </p>
+          </div>
+          <div>
+            <p><span class="font-semibold text-white">Email:</span> brianpbun@gmail.com</p>
+            <p><span class="font-semibold text-white">Nomor Telepon:</span> +62 823-2853-8414</p>
+            <p><span class="font-semibold text-white">Bahasa:</span> Indonesia, Inggris</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LINK SECTION -->
+      <div class="grid gap-6 sm:grid-cols-2 mt-16">
+        <a href="project.html" class="flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 transition py-3 px-6 rounded-lg text-white font-semibold shadow-lg">
+          <i data-lucide="layers" class="w-5 h-5"></i> Lihat Proyek
+        </a>
+        <a href="contact.html" class="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 transition py-3 px-6 rounded-lg text-white font-semibold shadow-lg">
+          <i data-lucide="message-circle" class="w-5 h-5"></i> Hubungi Saya
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 py-6 text-center text-gray-400 fade-in">
+    <p>&copy; 2024 Brian. All rights reserved.</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-in').forEach((el, i) => {
+        setTimeout(() => el.classList.add('show'), i * 150);
+      });
+    });
+  </script>
+</body>
+</html>

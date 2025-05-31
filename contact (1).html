@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak - Portofolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen">
+
+  <header class="bg-gray-800 py-5 shadow-lg fade-in">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-3xl font-extrabold">Kontak Saya</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+        <a href="project.html" class="hover:text-blue-400 transition">Projects</a>
+        <a href="contact.html" class="hover:text-blue-400 transition font-bold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-20 text-center">
+    <div class="fade-in">
+      <h2 class="text-4xl font-bold mb-6">Hubungi Saya</h2>
+      <p class="text-gray-300 mb-8">Berikut beberapa akun sosial media dan kontak aktif saya:</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 text-left max-w-3xl mx-auto">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md fade-in">
+          <div class="flex items-center gap-4 mb-2">
+            <i data-lucide="instagram" class="w-6 h-6 text-pink-500"></i>
+            <span class="font-semibold">Instagram</span>
+          </div>
+          <p><a href="https://www.instagram.com/gx_casual?igsh=YXl2a2c4MmU3Z2h6" class="text-blue-400 hover:underline" target="_blank">instagram.com/gx_casual</a></p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md fade-in">
+          <div class="flex items-center gap-4 mb-2">
+            <i data-lucide="music" class="w-6 h-6 text-white"></i>
+            <span class="font-semibold">TikTok</span>
+          </div>
+          <p><a href="https://www.tiktok.com/@indischpeople?_t=ZS-8wgtn1gFy5Z&_r=1" class="text-blue-400 hover:underline" target="_blank">tiktok.com/@indischpeople</a></p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md fade-in">
+          <div class="flex items-center gap-4 mb-2">
+            <i data-lucide="mail" class="w-6 h-6 text-red-500"></i>
+            <span class="font-semibold">Email</span>
+          </div>
+          <p><a href="mailto:brianpbun@gmail.com" class="text-blue-400 hover:underline">brianpbun@gmail.com</a></p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md fade-in">
+          <div class="flex items-center gap-4 mb-2">
+            <i data-lucide="phone" class="w-6 h-6 text-green-500"></i>
+            <span class="font-semibold">WhatsApp</span>
+          </div>
+          <p><a href="https://wa.me/6282328538414" class="text-blue-400 hover:underline" target="_blank">+62 823-2853-8414</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 py-6 text-center text-gray-400 fade-in">
+    <p>&copy; 2024 Brian. All rights reserved.</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-in').forEach((el, i) => {
+        setTimeout(() => el.classList.add('show'), i * 150);
+      });
+    });
+  </script>
+</body>
+</html>
